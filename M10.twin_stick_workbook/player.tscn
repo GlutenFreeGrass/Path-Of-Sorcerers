@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgtvu1uhl70d1"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_8ls10"]
+[ext_resource type="Texture2D" uid="uid://bw03btxpkxde4" path="res://player/godot_bottom.png" id="1_n6ksh"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="3_1ehk0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q3sfl"]
+radius = 26.0768
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_8ls10")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n6ksh")
+script = ExtResource("3_1ehk0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 28)
+shape = SubResource("CircleShape2D_q3sfl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
