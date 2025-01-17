@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0lwcyx2hlrub"]
+[gd_scene load_steps=3 format=3 uid="uid://521uuab1sqdk"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_8swip"]
-[ext_resource type="PackedScene" uid="uid://bm312yhybnq1c" path="res://player.tscn" id="2_pebyj"]
+[ext_resource type="PackedScene" uid="uid://cgtvu1uhl70d1" path="res://player.tscn" id="2_pebyj"]
 
 [node name="GameTest" type="Node2D"]
 
