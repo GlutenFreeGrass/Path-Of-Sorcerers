@@ -7,7 +7,7 @@
 radius = 12.0416
 
 [node name="Bullet" type="Area2D"]
-position = Vector2(164, 110)
+position = Vector2(288, 1)
 script = ExtResource("1_iqhdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

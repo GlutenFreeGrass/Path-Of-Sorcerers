@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://weapon.gd" id="1_ix6b1"]
 
 [node name="Weapon" type="Node2D"]
+position = Vector2(328, 0)
 script = ExtResource("1_ix6b1")

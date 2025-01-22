@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgtvu1uhl70d1"]
+[gd_scene load_steps=8 format=3 uid="uid://cgtvu1uhl70d1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_8ls10"]
 [ext_resource type="Texture2D" uid="uid://bw03btxpkxde4" path="res://player/godot_bottom.png" id="1_n6ksh"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="3_1ehk0"]
+[ext_resource type="PackedScene" uid="uid://2fd83lak2uph" path="res://weapon.tscn" id="4_iulle"]
+[ext_resource type="Script" path="res://weapon_pivot.gd" id="4_sr8ni"]
+[ext_resource type="Texture2D" uid="uid://dekkcmj408pvt" path="res://player/hand_fire.png" id="6_4806n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q3sfl"]
 radius = 26.0768
@@ -19,3 +22,22 @@ position = Vector2(0, 28)
 shape = SubResource("CircleShape2D_q3sfl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="WeaponPivot" type="Node2D" parent="."]
+script = ExtResource("4_sr8ni")
+
+[node name="Marker2D" type="Marker2D" parent="WeaponPivot"]
+rotation = -0.0548876
+
+[node name="Weapon" parent="WeaponPivot/Marker2D" instance=ExtResource("4_iulle")]
+position = Vector2(127.807, 7.02208)
+
+[node name="Left" type="Sprite2D" parent="WeaponPivot/Marker2D"]
+position = Vector2(75.8023, -18.5199)
+rotation = -0.226879
+texture = ExtResource("6_4806n")
+
+[node name="Right" type="Sprite2D" parent="WeaponPivot/Marker2D"]
+position = Vector2(75.0413, 24.485)
+rotation = 0.112322
+texture = ExtResource("6_4806n")
