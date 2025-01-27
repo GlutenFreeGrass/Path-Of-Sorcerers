@@ -7,13 +7,15 @@ extends Area2D
 
 var max_range := 500.0
 var traveled_distance = 0.0
+var damage = 1
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
+	body_entered.connect(func(body:Node)-> void:
+		if body is Mob:
+			body.health -= damage
+	)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var distances = speed * delta
@@ -27,3 +29,7 @@ func _process(delta: float) -> void:
 	
 func delete():
 	queue_free()
+
+
+func _on_body_exited(body: Node2D) -> void:
+	delete()

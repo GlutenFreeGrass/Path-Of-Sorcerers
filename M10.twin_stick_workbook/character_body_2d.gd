@@ -2,6 +2,9 @@ class_name Mob extends CharacterBody2D
 
 @export var max_speed := 600.0
 @export var acceleration := 700.0
+@export var health = 3: set = set_health
+
+
 var players: Player = null
 @onready var detector: Area2D = $detector
 
@@ -28,3 +31,12 @@ func _physics_process(delta: float) -> void:
 		var desired_velocity := direction * speed
 		velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 	move_and_slide()
+	
+func set_health(new_health: int) -> void:
+	health = new_health
+	if health <= 0:
+		die()
+
+func die() -> void:
+	queue_free()
+	
