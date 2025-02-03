@@ -13,6 +13,7 @@ radius = 500.0
 radius = 69.029
 
 [node name="Mob" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_175vt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -24,10 +25,14 @@ shape = SubResource("CircleShape2D_h78s8")
 [node name="detector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
+position = Vector2(-3, 12)
 rotation = -1.56953
 shape = SubResource("CircleShape2D_wtv8i")
 
 [node name="HitBox" type="Area2D" parent="."]
+scale = Vector2(1.19432, 1.27722)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 shape = SubResource("CircleShape2D_rtasf")
+
+[node name="Timer" type="Timer" parent="."]

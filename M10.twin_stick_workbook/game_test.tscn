@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_8swip"]
 [ext_resource type="PackedScene" uid="uid://cgtvu1uhl70d1" path="res://player.tscn" id="2_pebyj"]
-[ext_resource type="PackedScene" path="res://mob.tscn" id="3_6h5t4"]
+[ext_resource type="PackedScene" uid="uid://bj5yiqkynec8v" path="res://mob.tscn" id="3_6h5t4"]
 
 [node name="GameTest" type="Node2D"]
 
