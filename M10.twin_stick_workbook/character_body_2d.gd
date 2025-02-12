@@ -6,7 +6,7 @@ class_name Mob extends CharacterBody2D
 @export var health = 3: set = set_health
 @onready var hit_box: Area2D = $HitBox
 @onready var timer: Timer = $Timer
- 
+
 
 var players: Player = null
 @onready var detector: Area2D = $detector
