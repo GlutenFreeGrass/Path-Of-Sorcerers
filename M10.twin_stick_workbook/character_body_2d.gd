@@ -17,7 +17,6 @@ func _ready() -> void:
 	detector.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
 			players = body
-			print("AAAAAAAAAAAAAAAAA")
 	)
 	detector.body_exited.connect(func (body: Node) -> void:
 		if body is Player:
