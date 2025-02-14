@@ -55,6 +55,6 @@ func create_pickup() -> void:
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_OUT)
-	var jump_height := randf_range(20.0, 25.0)
+	var jump_height := randf_range(10.0, 15.0)
 	tween.tween_property(pickup, "position:y", land_position.y - jump_height, HALF_FLIGHT_TIME)
 	tween.set_ease(Tween.EASE_IN)

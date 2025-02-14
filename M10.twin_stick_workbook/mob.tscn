@@ -20,6 +20,7 @@ script = ExtResource("1_175vt")
 texture = ExtResource("2_7akb2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.662262, 0.662262)
 shape = SubResource("CircleShape2D_h78s8")
 
 [node name="detector" type="Area2D" parent="."]
@@ -30,7 +31,7 @@ rotation = -1.56953
 shape = SubResource("CircleShape2D_wtv8i")
 
 [node name="HitBox" type="Area2D" parent="."]
-scale = Vector2(1.19432, 1.27722)
+scale = Vector2(0.570865, 0.61049)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 shape = SubResource("CircleShape2D_rtasf")
