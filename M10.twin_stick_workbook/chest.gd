@@ -25,8 +25,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_near_player and event.is_action_pressed("interact"):
 		animation_player.play("Open")
 		create_pickup()
+		set_deferred("monitoring", false)
 		get_viewport().set_input_as_handled()
-	
+		
 
 
 func create_pickup() -> void:
@@ -54,6 +55,6 @@ func create_pickup() -> void:
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_OUT)
-	var jump_height := randf_range(30.0, 40.0)
+	var jump_height := randf_range(20.0, 25.0)
 	tween.tween_property(pickup, "position:y", land_position.y - jump_height, HALF_FLIGHT_TIME)
 	tween.set_ease(Tween.EASE_IN)

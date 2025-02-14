@@ -62,8 +62,8 @@ possible_items = Array[ExtResource("2_gdmho")]([SubResource("Resource_ei5ry")])
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 
 [node name="ChestBottom" type="Sprite2D" parent="CanvasGroup"]
-position = Vector2(0, 2)
-scale = Vector2(0.350185, 0.359047)
+position = Vector2(0, 3)
+scale = Vector2(0.337745, 0.38302)
 texture = ExtResource("1_70jcc")
 
 [node name="ChestTop" type="Sprite2D" parent="CanvasGroup"]
