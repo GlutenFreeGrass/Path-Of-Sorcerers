@@ -3,7 +3,7 @@ class_name Mob extends CharacterBody2D
 @export var damage := 1
 @export var max_speed := 500.0
 @export var acceleration := 700.0
-@export var health = 3: set = set_health
+@export var health = 5: set = set_health
 @onready var hit_box: Area2D = $HitBox
 @onready var timer: Timer = $Timer
 
